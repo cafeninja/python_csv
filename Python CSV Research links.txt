@@ -1,0 +1,8 @@
+Research links:
+Google search "https://www.google.com/search?client=safari&rls=en&ei=S86pXsa4DITikgXiqZbgCg&q=python+csv+sum+column&oq=python+csv+sum+column&gs_lcp=CgZwc3ktYWIQAzICCAAyBggAEBYQHjoECAAQR1C76eMDWPSB5ANg8onkA2gAcAJ4AoAB1geIAawbkgELMC4zLjMuNS0xLjKYAQCgAQGqAQdnd3Mtd2l6&sclient=psy-ab&ved=0ahUKEwiGiqzAqI7pAhUEsaQKHeKUBawQ4dUDCAs&uact=5"
+https://realpython.com/python-csv/
+http://fredgibbs.net/tutorials/extract-transform-save-csv
+https://www.reddit.com/r/learnpython/comments/5djs0i/summing_columns_in_csv_file/
+https://duckduckgo.com/?q=python+pandas+parse+date+and+time&t=h_&ia=web
+https://www.geeksforgeeks.org/python-working-with-date-and-time-using-pandas/
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html
