@@ -12,7 +12,7 @@ print(f'File should be in the download folder.')
 print(f'File name should be in the schema "INC00000.impact.csv".')
 ticketnumber = str(input('Ticket Number?: '))
 #
-#  for test will complete the varialbe by hand
+#  for test will complete the variable by hand
 tfiles = []
 for i in dlfiles:
     if ticketnumber in i:
@@ -50,7 +50,9 @@ for col in columnsi:
 	bsum = 0
 	for i in range(0, 3):
 		sample += dfi[col][i]
-	bcavg = sample / 3
+	for i in range(rowcount-3, rowcount):
+		sample += dfi[col][i]
+	bcavg = sample / 6
 	bmin = int(bcavg * .85)
 	# bad sample count
 	bsum = dfi[col] < bmin
