@@ -87,5 +87,8 @@ for col in columnsi:
 	#print(f'Count of bad samples: {bcount}')
 # for i in dfi['Placed bets: GameIncCasino']:
 # 	print(f'value of row {i}')
-print(f'Total Betplacement drop was: {bpdelta}')
-print(f'Total Turnover drop was {round(todelta, 2)}')
+print(f'Total Betplacement drop was: {round(bpdelta, 0)}')
+print(f'Total Turnover drop was: {round(todelta, 2)}')
+avgwager = todelta / bpdelta
+print(f'Total Average per wager was: {round(avgwager, 2)}')
+print(f'===================================\n' * 5)
