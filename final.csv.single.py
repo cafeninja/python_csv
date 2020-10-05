@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 
 # #Get file list of csv's in download direcltory
-basedir = '/Users/emmett/Downloads/'
+basedir = 'C:/Users/emst/Downloads/'
 dlfiles = os.listdir(basedir)
 
 print(f'File should be in the download folder.')
@@ -26,10 +26,15 @@ for i in tfiles:
 
 print(f'We will be using the file: {tfimpact}')
 tfimpact = basedir+tfimpact
-
+dfi = pd.read_csv (tfimpact)
+dfi = dfi.fillna("0")
+dfi.to_csv(tfimpact)
 dfi = pd.read_csv (tfimpact, index_col='_time', parse_dates=['_time'])
-
-###  start to do math.
+# convert blank to 0
+dfi = dfi.apply (pd.to_numeric, errors='coerce')
+dfi = dfi.replace(np.nan,0)
+###  show the dataframe
+#print(dfi)
 
 # average the first 3 rows per column.
 rowcount = len(dfi)

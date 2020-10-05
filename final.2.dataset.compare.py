@@ -32,13 +32,30 @@ for i in tfiles:
 
 tfimpact = basedir+tfimpact
 tfbase = basedir+tfbase
-
+# remove null cells in impact
+dfi = pd.read_csv (tfimpact)
+dfi = dfi.fillna("0")
+dfi.to_csv(tfimpact)
+# remove null ceslls in baseline
+dfb = pd.read_csv (tfbase)
+dfb = dfi.fillna("0")
+dfb.to_csv(tfbase)
 # print(tfimpact)
 # print(tfbase)
 ########################################################
 
 dfi = pd.read_csv (tfimpact, index_col='_time', parse_dates=['_time'])
 dfb = pd.read_csv (tfbase, index_col='_time', parse_dates=['_time'])
+# convert blank to 0
+dfi = dfi.apply (pd.to_numeric, errors='coerce')
+dfi = dfi.replace(np.nan,0)
+# convert blank to 0
+dfb = dfb.apply (pd.to_numeric, errors='coerce')
+dfb = dfb.replace(np.nan,0)
+
+###  show the dataframe
+#print(dfi)
+
 #print (df)
 columnsi = list(dfi)
 # print(columnsi)
