@@ -1,10 +1,14 @@
 import pandas as pd
 import os
-
+import numpy as np
 ########### Select Files ###################################
 
 # #Get file list of csv's in download direcltory
-basedir = '/Users/emmett/Downloads/'
+# For Linux
+# basedir = '/Users/emmett/Downloads/'
+# For Windows
+basedir = 'C:/Users/emst/Downloads/'
+
 dlfiles = os.listdir(basedir)
 #print(type(dlfiles))
 #print(dlfiles)
@@ -33,13 +37,13 @@ for i in tfiles:
 tfimpact = basedir+tfimpact
 tfbase = basedir+tfbase
 # remove null cells in impact
-dfi = pd.read_csv (tfimpact)
-dfi = dfi.fillna("0")
-dfi.to_csv(tfimpact)
+#dfi = pd.read_csv (tfimpact)
+#dfi = dfi.fillna("0")
+#dfi.to_csv(tfimpact)
 # remove null ceslls in baseline
-dfb = pd.read_csv (tfbase)
-dfb = dfi.fillna("0")
-dfb.to_csv(tfbase)
+#dfb = pd.read_csv (tfbase)
+#dfb = dfi.fillna("0")
+#dfb.to_csv(tfbase)
 # print(tfimpact)
 # print(tfbase)
 ########################################################
